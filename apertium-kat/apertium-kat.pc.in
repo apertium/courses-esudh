@@ -1,0 +1,8 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+srcdir=@datarootdir@/apertium/apertium-kat
+
+Name: apertium-kat
+Description: Finite-state morphological transducer and constraint grammar for Georgian 
+Version: @VERSION@
+
