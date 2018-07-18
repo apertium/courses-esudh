@@ -1,0 +1,8 @@
+prefix=@prefix@
+exec_prefix=${prefix}
+srcdir=@datarootdir@/apertium/apertium-fin
+
+Name: apertium-fin
+Description: Finite-state morphological transducer and constraint grammar for {{languageName}} 
+Version: @VERSION@
+
