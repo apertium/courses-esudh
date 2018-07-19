@@ -4,6 +4,8 @@ Multichar_Symbols
 
 ! Part of speech categories
 %<n%>   ! Noun
+%<vblex%> ! verbs
+%<adj%>  ! adjectives
 
 ! Number morphology
 %<pl%>  ! Plural
@@ -19,24 +21,35 @@ Multichar_Symbols
 
 LEXICON Root
 
-NounRoot ;
+Nouns ;
+Determiners ;
 
+LEXICON noun_talo
 
-LEXICON RegNounInfl
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<pl%>%<nom%>:t # ;
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:%>s # ;
+LEXICON noun_näkö
 
+%<n%>%<sg%>%<nom%>:kö # ;
+%<n%>%<pl%>%<nom%>:öt # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON NounRoot
+LEXICON det
 
-house:house RegNounInfl ; ! A noun
+%<det%>:0 # ; 
 
+LEXICON Nouns
 
+talo noun_talo  ; ! house
+näkö:nä   noun_näkö  ; 
+
+LEXICON Determiners
+
+se det ;
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
