@@ -5,6 +5,8 @@ Multichar_Symbols
 ! Part of speech categories
 %<n%>   ! Noun
 %<vblex%> ! verbs
+%<vaux%> ! auxiliaries
+%<det%> ! determiners
 %<adj%>  ! adjectives
 
 ! Number morphology
@@ -23,6 +25,9 @@ LEXICON Root
 
 Nouns ;
 Determiners ;
+Verbs ;
+Adjectives ;
+
 
 LEXICON noun_talo
 
@@ -33,6 +38,15 @@ LEXICON noun_näkö
 
 %<n%>%<sg%>%<nom%>:kö # ;
 %<n%>%<pl%>%<nom%>:öt # ;
+
+LEXICON verb_olla
+
+%<vaux%>%<inf%>:olla # ;
+%<vaux%>%<pres%>%<p1%>%<sg%>:olen # ;
+%<vaux%>%<pres%>%<p2%>%<sg%>:olet # ;
+%<vaux%>%<pres%>%<p3%>%<sg%>:on # ;
+%<vaux%>%<pres%>%<p1%>%<pl%>:olemme # ;
+%<vaux%>%<potn%>%<p1%>%<sg%>:lienen # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -46,6 +60,10 @@ LEXICON Nouns
 
 talo noun_talo  ; ! house
 näkö:nä   noun_näkö  ; 
+
+LEXICON Verbs
+
+olla:0  verb_olla ;
 
 LEXICON Determiners
 
