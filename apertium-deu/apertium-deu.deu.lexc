@@ -4,10 +4,33 @@ Multichar_Symbols
 
 ! Part of speech categories
 %<n%>   ! Noun
+%<vblex%> ! Verb
+%<vaux%> ! Auxiliary Verbs
+%<adj%> ! Adjectiv
 
 ! Number morphology
 %<pl%>  ! Plural
 %<sg%>  ! Singular
+
+! Cases
+%<nom%> ! Nominativ
+%<gen%> ! Genitiv
+%<dat%> ! Dativ
+%<akk%> ! Akkusativ
+
+! Tenses
+
+%<inf%> ! Infinitiv
+%<pres%> ! Präsens
+%<pret%> ! Präteritum
+%<part1%> ! Partizip 1
+%<part2%> ! Partizip 2
+
+! Persons Verbs 
+
+%<p1%> ! First Person
+%<p2%> ! Second Person
+%<p3%> ! Third Person
 
 ! Other symbols
 %>      ! Morpheme boundary
@@ -20,13 +43,111 @@ Multichar_Symbols
 LEXICON Root
 
 NounRoot ;
+Adjectives ;
+Verbs ;
+Auxiliary Verbs ;
+Determiners ;
 
+LEXICON HausInfl
 
-LEXICON RegNounInfl
+%<n%>%<sg%>%<nom%>:aus # ;
+%<n%>%<sg%>%<gen%>:auses # ;
+%<n%>%<sg%>%<dat%>:aus # ;
+%<n%>%<sg%>%<akk%>:aus # ;
+%<n%>%<pl%>%<nom%>:äuser # ;
+%<n%>%<pl%>%<gen%>:äuser # ;
+%<n%>%<pl%>%<dat%>:äusern # ;
+%<n%>%<pl%>%<akk%>:äuser # ;
+
+LEXICON TischInfl
 
 %<n%>%<sg%>: # ;
-%<n%>%<pl%>:%>s # ;
+%<n%>%<pl%>:e # ;
 
+LEXICON PflanzeInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:n # ;
+
+LEXICON BildInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:er # ;
+
+LEXICON StuhlInfl
+
+%<n%>%<sg%>:uhl # ;
+%<n%>%<pl%>:ühle # ;
+
+LEXICON FensterInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>: # ;
+
+LEXICON KönigInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:e # ;
+
+LEXICON KöniginInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:innen # ;
+
+LEXICON KindInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:er # ;
+
+LEXICON BadInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:äder # ;
+
+LEXICON FroschInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:ösche # ;
+
+LEXICON WasserInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>: # ;
+
+LEXICON LandInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:änder # ;
+
+LEXICON JahrInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:e # ;
+
+LEXICON TochterInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:öchter # ;
+
+LEXICON MädchenInfl
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>: # ;
+
+LEXICON RegAdjInfl
+
+%<adj%>%<sg%>: # ;
+%<adj%>%<pl%>: # ;
+
+LEXICON seinInfl
+
+%<vaux%>%<inf%>:sein # ;
+%<vaux%>%<pres%>%<p1%>%<sg%>:bin # ;
+%<vaux%>%<pres%>%<p2%>%<sg%>:bist # ;
+%<vaux%>%<pres%>%<p3%>%<sg%>:ist # ;
+%<vaux%>%<pres%>%<p1%>%<pl%>:sind # ;
+%<vaux%>%<pres%>%<p2%>%<sg%>:seid # ;
+%<vaux%>%<pres%>%<p3%>%<sg%>:sind # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -34,9 +155,37 @@ LEXICON RegNounInfl
 
 LEXICON NounRoot
 
-house:house RegNounInfl ; ! A noun
+Tür:Tür RegNounInfl ; ! A noun
+Haus:H HausInfl ; ! A Noun
+Tisch:Tisch TischInfl ; ! A Noun
+Pflanze:Pflanze PflanzeInfl ; ! A Noun
+Frau:Frau RegNounInfl ; ! A noun
+Mensch:Mensch RegNounInfl ; ! A noun
+Bild:Bild BildInfl ; ! A Noun
+Stuhl:St StuhlInfl ; ! A Noun
+Fenster:Fenster FensterInfl ; ! A Noun
+König:König KönigInfl ;
+Königin:Königin KöniginInfl ;
+Tag:Tag TagInfl ;
+Kind:Kind KindInfl ;
+Bad:B BadInfl ;
+Frosch:Fr FroschInfl ;
+Wasser:Wasser WasserInfl ;
+Land:L LandInfl ;
+Jahr:Jahr JahrInfl ;
+Tochter:T TochterInfl ;
+Welt:Welt RegNounInfl ;
+Mädchen:Mädchen MädchenInfl ;
 
+LEXICON Adjectives
 
+schön:schön RegAdjInfl ;
+
+LEXICON Auxiliary Verbs
+
+sein:0 seinInfl ;
+
+LEXICON Verbs
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
