@@ -1,10 +1,10 @@
 ###############################################################################
-## Makefile for apertium-{{languageCode}}
+## Makefile for apertium-fra
 ###############################################################################
 
 RELEASE=0.1
 VERSION=0.1.0
-LANG1={{languageCode}}
+LANG1=fra
 BASENAME=apertium-$(LANG1)
 
 TARGETS_COMMON =			\
@@ -15,7 +15,6 @@ TARGETS_COMMON =			\
 	$(LANG1).autogen.bin		\
 	$(LANG1).autogen.att.gz		\
 	$(LANG1).autopgen.bin		\
-	$(LANG1).prob                   \
 	$(LANG1).rlx.bin
 
 # This include defines goals for install-modes, .deps/.d, autobil.prefixes and .mode files:
@@ -124,8 +123,6 @@ $(LANG1).zhfst: .deps/acceptor.default.hfst .deps/errmodel.default.hfst
 ## Unigram tagger
 ###############################################################################
 
-$(LANG1).prob: corpus/$(LANG1).tagged
-	apertium-tagger -s 0 -u 2 $@ $<
 
 ###############################################################################
 ## Distribution
@@ -135,18 +132,17 @@ EXTRA_DIST=$(BASENAME).$(LANG1).lexc		\
 		$(BASENAME).$(LANG1).twol	\
 		$(BASENAME).$(LANG1).rlx	\
 		$(BASENAME).post-$(LANG1).dix	\
-		$(LANG1).prob			\
 		modes.xml
 
 ###############################################################################
 ## Installation stuff
 ###############################################################################
 #
-#   apertium_{{languageCode}}_dir: This is where the compiled binaries go
-#   apertium_{{languageCode}}_srcdir: This is where the source files go
+#   apertium_fra_dir: This is where the compiled binaries go
+#   apertium_fra_srcdir: This is where the source files go
 
-apertium_{{languageCode}}dir=$(prefix)/share/apertium/$(BASENAME)/
-apertium_{{languageCode}}_srcdir=$(prefix)/share/apertium/$(BASENAME)/
+apertium_fradir=$(prefix)/share/apertium/$(BASENAME)/
+apertium_fra_srcdir=$(prefix)/share/apertium/$(BASENAME)/
 
 EXTRA_TARGETS=
 
@@ -154,7 +150,7 @@ if HAVE_HFSTOSPELL
 EXTRA_TARGETS += $(LANG1).zhfst
 endif # HAVE_HFSTOSPELL
 
-apertium_{{languageCode}}_DATA=$(TARGETS_COMMON) $(EXTRA_TARGETS)
+apertium_fra_DATA=$(TARGETS_COMMON) $(EXTRA_TARGETS)
 
 pkgconfigdir = $(prefix)/share/pkgconfig
 pkgconfig_DATA = $(BASENAME).pc
@@ -162,11 +158,11 @@ pkgconfig_DATA = $(BASENAME).pc
 noinst_DATA=modes/$(LANG1)-morph.mode
 
 install-data-local: install-modes
-	test -d $(DESTDIR)$(apertium_{{languageCode}}_srcdir) || mkdir -p $(DESTDIR)$(apertium_{{languageCode}}_srcdir)
-	$(INSTALL_DATA) $(BASENAME).$(LANG1).lexc $(DESTDIR)$(apertium_{{languageCode}}_srcdir)
-	$(INSTALL_DATA) $(BASENAME).$(LANG1).twol $(DESTDIR)$(apertium_{{languageCode}}_srcdir)
-	$(INSTALL_DATA) $(BASENAME).$(LANG1).rlx $(DESTDIR)$(apertium_{{languageCode}}_srcdir)
-	$(INSTALL_DATA) $(BASENAME).post-$(LANG1).dix $(DESTDIR)$(apertium_{{languageCode}}_srcdir)
+	test -d $(DESTDIR)$(apertium_fra_srcdir) || mkdir -p $(DESTDIR)$(apertium_fra_srcdir)
+	$(INSTALL_DATA) $(BASENAME).$(LANG1).lexc $(DESTDIR)$(apertium_fra_srcdir)
+	$(INSTALL_DATA) $(BASENAME).$(LANG1).twol $(DESTDIR)$(apertium_fra_srcdir)
+	$(INSTALL_DATA) $(BASENAME).$(LANG1).rlx $(DESTDIR)$(apertium_fra_srcdir)
+	$(INSTALL_DATA) $(BASENAME).post-$(LANG1).dix $(DESTDIR)$(apertium_fra_srcdir)
 
 ###############################################################################
 ## Cleanup
@@ -181,7 +177,7 @@ clean-local:
 ###############################################################################
 
 test: all
-	echo "TODO test sentence" | apertium -d . {{languageCode}}-morph | tee .test-mt
+	echo "TODO test sentence" | apertium -d . fra-morph | tee .test-mt
 	@echo "TODO test analysis results" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt

@@ -1,6 +1,6 @@
 AC_PREREQ(2.52)
 
-AC_INIT([Apertium {{languageName}}], [0.1.0], [{{email}}], [apertium-{{languageCode}}], [http://wiki.apertium.org/wiki/Apertium-{{languageCode}}])
+AC_INIT([Apertium {{languageName}}], [0.1.0], [{{email}}], [apertium-fra], [http://wiki.apertium.org/wiki/Apertium-fra])
 AM_INIT_AUTOMAKE
 
 AC_PROG_LN_S
@@ -36,5 +36,5 @@ AS_IF([test x$CGCOMP = xfalse], [AC_MSG_ERROR([You don't have cg-comp installed]
 
 AP_MKINCLUDE
 
-AC_OUTPUT([Makefile apertium-{{languageCode}}.pc])
+AC_OUTPUT([Makefile apertium-fra.pc])
 
