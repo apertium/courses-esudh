@@ -45,7 +45,7 @@ LEXICON Root
 NounRoot ;
 Adjectives ;
 Verbs ;
-Auxiliary Verbs ;
+Auxiliary_Verbs ;
 Determiners ;
 
 LEXICON HausInfl
@@ -61,78 +61,168 @@ LEXICON HausInfl
 
 LEXICON TischInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:e # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<gen%>:es # ;
+%<n%>%<sg%>%<dat%>: # ;
+%<n%>%<sg%>%<akk%>: # ;
+%<n%>%<pl%>%<nom%>:e # ;
+%<n%>%<pl%>%<gen%>:e # ;
+%<n%>%<pl%>%<dat%>:en # ;
+%<n%>%<pl%>%<akk%>:e # ;
 
 LEXICON PflanzeInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:n # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<gen%>: # ;
+%<n%>%<sg%>%<dat%>: # ;
+%<n%>%<sg%>%<akk%>: # ;
+%<n%>%<pl%>%<nom%>:n # ;
+%<n%>%<pl%>%<gen%>:n # ;
+%<n%>%<pl%>%<dat%>:n # ;
+%<n%>%<pl%>%<akk%>:n # ;
 
 LEXICON BildInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:er # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<gen%>:s # ;
+%<n%>%<sg%>%<dat%>: # ;
+%<n%>%<sg%>%<akk%>: # ;
+%<n%>%<pl%>%<nom%>:er # ;
+%<n%>%<pl%>%<gen%>:er # ;
+%<n%>%<pl%>%<dat%>:ern # ;
+%<n%>%<pl%>%<akk%>:er # ;
 
 LEXICON StuhlInfl
 
-%<n%>%<sg%>:uhl # ;
-%<n%>%<pl%>:ühle # ;
+%<n%>%<sg%>%<nom%>:uhl # ;
+%<n%>%<sg%>%<gen%>:uhls # ;
+%<n%>%<sg%>%<dat%>:uhl # ;
+%<n%>%<sg%>%<akk%>:uhl # ;
+%<n%>%<pl%>%<nom%>:ühle # ;
+%<n%>%<pl%>%<gen%>:ühle # ;
+%<n%>%<pl%>%<dat%>:ühlen # ;
+%<n%>%<pl%>%<akk%>:ühle # ;
 
 LEXICON FensterInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>: # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<gen%>:s # ;
+%<n%>%<sg%>%<dat%>: # ;
+%<n%>%<sg%>%<akk%>: # ;
+%<n%>%<pl%>%<nom%>: # ;
+%<n%>%<pl%>%<gen%>: # ;
+%<n%>%<pl%>%<dat%>:n # ;
+%<n%>%<pl%>%<akk%>: # ;
 
 LEXICON KönigInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:e # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<gen%>:s # ;
+%<n%>%<sg%>%<dat%>: # ;
+%<n%>%<sg%>%<akk%>: # ;
+%<n%>%<pl%>%<nom%>:e # ;
+%<n%>%<pl%>%<gen%>:e # ;
+%<n%>%<pl%>%<dat%>:en # ;
+%<n%>%<pl%>%<akk%>:e # ;
 
 LEXICON KöniginInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:innen # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<gen%>: # ;
+%<n%>%<sg%>%<dat%>: # ;
+%<n%>%<sg%>%<akk%>: # ;
+%<n%>%<pl%>%<nom%>:nen # ;
+%<n%>%<pl%>%<gen%>:nen # ;
+%<n%>%<pl%>%<dat%>:nen # ;
+%<n%>%<pl%>%<akk%>:nen # ;
 
 LEXICON KindInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:er # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<gen%>:s # ;
+%<n%>%<sg%>%<dat%>: # ;
+%<n%>%<sg%>%<akk%>: # ;
+%<n%>%<pl%>%<nom%>:er # ;
+%<n%>%<pl%>%<gen%>:er # ;
+%<n%>%<pl%>%<dat%>:ern # ;
+%<n%>%<pl%>%<akk%>:er # ;
 
 LEXICON BadInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:äder # ;
+%<n%>%<sg%>%<nom%>:ad # ;
+%<n%>%<sg%>%<gen%>:ads # ;
+%<n%>%<sg%>%<dat%>:ad # ;
+%<n%>%<sg%>%<akk%>:ad # ;
+%<n%>%<pl%>%<nom%>:äder # ;
+%<n%>%<pl%>%<gen%>:äder # ;
+%<n%>%<pl%>%<dat%>:ädern # ;
+%<n%>%<pl%>%<akk%>:äder # ;
 
 LEXICON FroschInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:ösche # ;
+%<n%>%<sg%>%<nom%>:osch # ;
+%<n%>%<sg%>%<gen%>:oschs # ;
+%<n%>%<sg%>%<dat%>:osch # ;
+%<n%>%<sg%>%<akk%>:osch # ;
+%<n%>%<pl%>%<nom%>:ösche # ;
+%<n%>%<pl%>%<gen%>:ösche # ;
+%<n%>%<pl%>%<dat%>:öschen # ;
+%<n%>%<pl%>%<akk%>:ösche # ;
 
 LEXICON WasserInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>: # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<gen%>:s # ;
+%<n%>%<sg%>%<dat%>: # ;
+%<n%>%<sg%>%<akk%>: # ;
+%<n%>%<pl%>%<nom%>: # ;
+%<n%>%<pl%>%<gen%>: # ;
+%<n%>%<pl%>%<dat%>:n # ;
+%<n%>%<pl%>%<akk%>: # ;
 
 LEXICON LandInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:änder # ;
+%<n%>%<sg%>%<nom%>:and # ;
+%<n%>%<sg%>%<gen%>:ands # ;
+%<n%>%<sg%>%<dat%>:and # ;
+%<n%>%<sg%>%<akk%>:and # ;
+%<n%>%<pl%>%<nom%>:änder # ;
+%<n%>%<pl%>%<gen%>:änder # ;
+%<n%>%<pl%>%<dat%>:ändern # ;
+%<n%>%<pl%>%<akk%>:änder # ;
 
 LEXICON JahrInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:e # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<gen%>:s # ;
+%<n%>%<sg%>%<dat%>: # ;
+%<n%>%<sg%>%<akk%>: # ;
+%<n%>%<pl%>%<nom%>:e # ;
+%<n%>%<pl%>%<gen%>:e # ;
+%<n%>%<pl%>%<dat%>:en # ;
+%<n%>%<pl%>%<akk%>:e # ;
 
 LEXICON TochterInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>:öchter # ;
+%<n%>%<sg%>%<nom%>:ochter # ;
+%<n%>%<sg%>%<gen%>:ochter # ;
+%<n%>%<sg%>%<dat%>:ochter # ;
+%<n%>%<sg%>%<akk%>:ochter # ;
+%<n%>%<pl%>%<nom%>:öchter # ;
+%<n%>%<pl%>%<gen%>:öchter # ;
+%<n%>%<pl%>%<dat%>:öchtern # ;
+%<n%>%<pl%>%<akk%>:öchter # ;
 
 LEXICON MädchenInfl
 
-%<n%>%<sg%>: # ;
-%<n%>%<pl%>: # ;
+%<n%>%<sg%>%<nom%>: # ;
+%<n%>%<sg%>%<gen%>:s # ;
+%<n%>%<sg%>%<dat%>: # ;
+%<n%>%<sg%>%<akk%>: # ;
+%<n%>%<pl%>%<nom%>: # ;
+%<n%>%<pl%>%<gen%>: # ;
+%<n%>%<pl%>%<dat%>: # ;
+%<n%>%<pl%>%<akk%>: # ;
 
 LEXICON RegAdjInfl
 
@@ -142,12 +232,20 @@ LEXICON RegAdjInfl
 LEXICON seinInfl
 
 %<vaux%>%<inf%>:sein # ;
+%<vaux%>%<part1%>:seiend # ;
+%<vaux%>%<part2%>:gewesen # ;
 %<vaux%>%<pres%>%<p1%>%<sg%>:bin # ;
 %<vaux%>%<pres%>%<p2%>%<sg%>:bist # ;
 %<vaux%>%<pres%>%<p3%>%<sg%>:ist # ;
 %<vaux%>%<pres%>%<p1%>%<pl%>:sind # ;
-%<vaux%>%<pres%>%<p2%>%<sg%>:seid # ;
-%<vaux%>%<pres%>%<p3%>%<sg%>:sind # ;
+%<vaux%>%<pres%>%<p2%>%<pl%>:seid # ;
+%<vaux%>%<pres%>%<p3%>%<pl%>:sind # ;
+%<vaux%>%<pret%>%<p1%>%<sg%>:war # ;
+%<vaux%>%<pret%>%<p2%>%<sg%>:warst # ;
+%<vaux%>%<pret%>%<p3%>%<sg%>:war # ;
+%<vaux%>%<pret%>%<p1%>%<pl%>:waren # ;
+%<vaux%>%<pret%>%<p2%>%<pl%>:wart # ;
+%<vaux%>%<pret%>%<p3%>%<pl%>:waren # ;
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
@@ -155,12 +253,9 @@ LEXICON seinInfl
 
 LEXICON NounRoot
 
-Tür:Tür RegNounInfl ; ! A noun
 Haus:H HausInfl ; ! A Noun
 Tisch:Tisch TischInfl ; ! A Noun
 Pflanze:Pflanze PflanzeInfl ; ! A Noun
-Frau:Frau RegNounInfl ; ! A noun
-Mensch:Mensch RegNounInfl ; ! A noun
 Bild:Bild BildInfl ; ! A Noun
 Stuhl:St StuhlInfl ; ! A Noun
 Fenster:Fenster FensterInfl ; ! A Noun
@@ -174,18 +269,15 @@ Wasser:Wasser WasserInfl ;
 Land:L LandInfl ;
 Jahr:Jahr JahrInfl ;
 Tochter:T TochterInfl ;
-Welt:Welt RegNounInfl ;
 Mädchen:Mädchen MädchenInfl ;
 
 LEXICON Adjectives
 
 schön:schön RegAdjInfl ;
 
-LEXICON Auxiliary Verbs
+LEXICON Auxiliary_Verbs
 
 sein:0 seinInfl ;
-
-LEXICON Verbs
 
 ! Resources:
 ! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
