@@ -1,0 +1,172 @@
+! Morphological Transducer for {{French}}
+
+Multichar_Symbols
+
+! Part of speech categories
+%<n%>   ! Noun
+
+! Number morphology
+%<pl%>  ! Plural
+%<sg%>  ! Singular
+
+! Determiner
+%<det%> ! determiner
+%<indefdet%> ! indef determiner
+
+! adjectives
+%<adj%>%<fem%> ! adjective feminin
+%<adj%>%<mas%> ! adjective masculin 
+
+! verb
+%<verb%> ! 
+
+
+! Other symbols
+%>      ! Morpheme boundary
+
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!                       M O R P H O T A C T I C S                         !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+LEXICON Root
+
+RegNounInfl;
+Verbs;
+det;
+indefdet;
+
+LEXICON RegNounInfl
+
+
+%<n%>%<sg%>: # ;
+%<n%>%<pl%>:%>s # ;
+
+
+
+LEXICON det
+
+%<det%>:0 # ; 
+
+LEXICON indefdet
+
+%<indefdet%>:0 # ;
+
+LEXICON VerbsER
+%<verb%>%<inf>:%>:# ;
+%<verb%>%<p1>:%>e# ;
+%<verb%>%<p2>:%>es# ;
+%<verb%>%<p3>:%>e# ;
+%<verb%>%<p4>:%>ons# ;
+%<verb%>%<p5>:%>ez# ;
+%<verb%>%<p6>:%>ent# ;
+
+LEXICON VerbsIR
+%<verb%>%<inf>:%>:# ;
+%<verbsir%>%<p1>:%>s# ;
+%<verbsir%>%<p2>:%>s# ;
+%<verbsir%>%<p3>:%>t# ;
+%<verbsir%>%<p4>:%>ons# ;
+%<verbsir%>%<p5>:%>ez# ;
+%<verbsir%>%<p6>:%>ent# ;
+
+LEXICON VerbsRE
+%<verb%>%<inf>:%>:# ;
+%<verb%>%<p1>:%>s# ;
+%<verb%>%<p2>:%>s# ;
+%<verb%>%<p3>:%>:# ;
+%<verb%>%<p4>:%>ons# ;
+%<verb%>%<p5>:%>ez# ;
+%<verb%>%<p6>:%>ent# ;
+
+LEXICON Verb pouvoir_savoir
+%<verb%>%<inf>:%>:# ;
+%<verb%>%<p1>:%>x# ;
+%<verb%>%<p2>:%>x# ;
+%<verb%>%<p3>:%>t# ;
+%<verb%>%<p4>:%>ons# ;
+%<verb%>%<p5>:%>ez# ;
+%<verb%>%<p6>:%>ent# ;
+
+LEXICON Verb_etre 
+%<verb%>%<inf>:%>:# ;
+%<verb%>%<p1>:%>suis# ;
+%<verb%>%<p2>:%>es# ;
+%<verb%>%<p3>:%>est# ;
+%<verb%>%<p4>:%>sommes# ;
+%<verb%>%<p5>:%>etes# ;
+%<verb%>%<p6>:%>sont# ; 
+
+LEXICON Verb_avoir 
+%<verb%>%<inf>:%>:# ;
+%<verb%>%<p1>:%>ai# ;
+%<verb%>%<p2>:%>as# ;
+%<verb%>%<p3>:%>a# ;
+%<verb%>%<p4>:%>avons# ;
+%<verb%>%<p5>:%>avez# ;
+%<verb%>%<p6>:%>ont# ; 
+
+
+
+LEXICON Verb_aller 
+%<verb%>%<inf>:%>:# ;
+%<verb%>%<p1>:%>vais# ;
+%<verb%>%<p2>:%>vas# ;
+%<verb%>%<p3>:%>va# ;
+%<verb%>%<p4>:%>allons# ;
+%<verb%>%<p5>:%>allez# ;
+%<verb%>%<p6>:%>vont#;
+
+LEXICON Adjectives;
+
+%<adj%>%<fem%>:%>e# ; ! adjective feminin
+%<adj%>%<mas%>:# ; ! adjective masculin 
+%<adj%>%<mas%>:%>s# ;! plural masculin
+%<adj%>%<fem%>%<plur%>:%>e:%>s# ; ! plural feminin 
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!                          L E X I C O N                                  !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+LEXICON RegNounInfl
+
+maison RegNounInfl ; ! a noun
+femme RegNounInfl ; ! a noun
+homme RegNounInfl ; ! a noun
+fille RegNounInfl ; ! a noun 
+fils RegNounInfl ; ! a noun 
+
+LEXICON Verbs
+
+regarder:regard RegularVerbsER ; ! regular verbs ending -er
+
+
+LEXICON det
+%<det%>:0 # ; 
+
+le det ; ! masculine determiner 
+la det ; ! female determiner
+les det ; ! plural determiner 
+
+LEXICON indefdet
+
+un indefdet ; ! masculine determiner 
+une indefdet ; ! feminine determiner 
+
+! Resources:
+! http://wiki.apertium.org/wiki/Starting_a_new_language_with_HFST#Lexicon
+! http://wiki.apertium.org/wiki/Lttoolbox_and_lexc
+! http://wiki.apertium.org/wiki/Apertium-specific_conventions_for_lexc
+! https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstHome
+! https://github.com/hfst/
+! http://www.cis.upenn.edu/~cis639/docs/lexc.html
+! http://wiki.apertium.org/wiki/Hfst
+
