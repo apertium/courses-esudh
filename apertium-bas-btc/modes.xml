@@ -3,25 +3,14 @@
 
   <!-- bas → btc -->
 
-  <mode name="bas-btc" install="yes" gendebug="yes">
+  <mode name="bas-btc" install="yes">
     <pipeline>
-      <program name="lt-proc -w">
-        <file name="bas-btc.automorf.bin"/>
+      <program name="hfst-proc -w">
+        <file name="bas-btc.automorf.hfst"/>
       </program>
-{{if_prob1
-{{if_rlx1
-      <program name="cg-proc -w">
-        <file name="bas-btc.rlx.bin"/>
-      </program>
-if_rlx1}}
-      <program name="apertium-tagger -g $2">
-        <file name="bas-btc.prob"/>
-      </program>
-if_prob1}}{{ifnot_prob1
       <program name="cg-proc -w -1 -n">
         <file name="bas-btc.rlx.bin"/>
       </program>
-ifnot_prob1}}
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="bas-btc.autobil.bin"/>
@@ -30,49 +19,33 @@ ifnot_prob1}}
         <file name="bas-btc.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
-        <file name="apertium-bas-btc.bas-btc.t1x"/>
+        <file name="apertium-bas-btc.kat-eng.t1x"/>
         <file name="bas-btc.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-bas-btc.bas-btc.t2x"/>
+        <file name="apertium-bas-btc.kat-eng.t2x"/>
         <file name="bas-btc.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-bas-btc.bas-btc.t3x"/>
+        <file name="apertium-bas-btc.kat-eng.t3x"/>
         <file name="bas-btc.t3x.bin"/>
       </program>
-      <program name="lt-proc $1">
-        <file name="bas-btc.autogen.bin"/>
+      <program name="hfst-proc $1">
+        <file name="bas-btc.autogen.hfst"/>
       </program>
-{{if_pgen2
-      <program name="lt-proc -p">
-        <file name="bas-btc.autopgen.bin"/>
-      </program>
-if_pgen2}}
     </pipeline>
   </mode>
 
   <!-- btc → bas -->
 
-  <mode name="btc-bas" install="yes" gendebug="yes">
+  <mode name="btc-bas" install="yes">
     <pipeline>
-      <program name="lt-proc -w">
-        <file name="btc-bas.automorf.bin"/>
+      <program name="hfst-proc -w">
+        <file name="btc-bas.automorf.hfst"/>
       </program>
-{{if_prob2
-{{if_rlx2
-      <program name="cg-proc -w">
-        <file name="btc-bas.rlx.bin"/>
-      </program>
-if_rlx2}}
-      <program name="apertium-tagger -g $2">
-        <file name="btc-bas.prob"/>
-      </program>
-if_prob2}}{{ifnot_prob2
       <program name="cg-proc -w -1 -n">
         <file name="btc-bas.rlx.bin"/>
       </program>
-ifnot_prob2}}
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="btc-bas.autobil.bin"/>
@@ -81,25 +54,20 @@ ifnot_prob2}}
         <file name="btc-bas.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
-        <file name="apertium-bas-btc.btc-bas.t1x"/>
+        <file name="apertium-bas-btc.eng-kat.t1x"/>
         <file name="btc-bas.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-bas-btc.btc-bas.t2x"/>
+        <file name="apertium-bas-btc.eng-kat.t2x"/>
         <file name="btc-bas.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-bas-btc.btc-bas.t3x"/>
+        <file name="apertium-bas-btc.eng-kat.t3x"/>
         <file name="btc-bas.t3x.bin"/>
       </program>
-      <program name="lt-proc $1">
-        <file name="btc-bas.autogen.bin"/>
+      <program name="hfst-proc $1">
+        <file name="btc-bas.autogen.hfst"/>
       </program>
-{{if_pgen1
-      <program name="lt-proc -p">
-        <file name="btc-bas.autopgen.bin"/>
-      </program>
-if_pgen1}}
     </pipeline>
   </mode>
 </modes>
