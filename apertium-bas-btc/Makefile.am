@@ -14,7 +14,7 @@ TARGETS_COMMON = \
 	$(PREFIX1).rlx.bin \
 	$(PREFIX1).autobil.bin \
 	$(PREFIX1).autolex.bin \
-	$(PREFIX1).autogen.bin \
+	$(PREFIX1).autogen.hfst \
 	$(PREFIX1).t1x.bin \
 	$(PREFIX1).t2x.bin \
 	$(PREFIX1).t3x.bin \
@@ -36,6 +36,7 @@ modes/bas-btc.mode: modes.xml
 	fi
 	apertium-gen-modes $(srcdir)/modes.xml
 	mv -v bas-btc.mode $@
+	-mv -v btc-bas.mode $@
 
 modes/btc-bas.mode: modes.xml
 	if ! test -d modes ; then \
@@ -43,6 +44,7 @@ modes/btc-bas.mode: modes.xml
 	fi
 	apertium-gen-modes $(srcdir)/modes.xml
 	mv -v btc-bas.mode $@
+	-mv -v bas-btc.mode modes/
 
 ###############################################################################
 ## Monolingual transducers
@@ -78,7 +80,7 @@ $(PREFIX2).automorf-untrimmed.bin: $(AP_SRC2)/$(LANG2).automorf.bin
 # ---------------------
 
 
-$(PREFIX1).autogen.bin: $(AP_SRC2)/$(LANG2).autogen.bin
+$(PREFIX1).autogen.hfst: $(AP_SRC2)/$(LANG2).autogen.hfst
 	cp $< $@
 
 ###############################################################################
