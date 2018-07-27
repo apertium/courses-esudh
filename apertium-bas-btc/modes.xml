@@ -19,15 +19,15 @@
         <file name="bas-btc.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
-        <file name="apertium-bas-btc.kat-eng.t1x"/>
+        <file name="apertium-bas-btc.bas-btc.t1x"/>
         <file name="bas-btc.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-bas-btc.kat-eng.t2x"/>
+        <file name="apertium-bas-btc.bas-btc.t2x"/>
         <file name="bas-btc.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-bas-btc.kat-eng.t3x"/>
+        <file name="apertium-bas-btc.bas-btc.t3x"/>
         <file name="bas-btc.t3x.bin"/>
       </program>
       <program name="hfst-proc $1">
@@ -54,15 +54,15 @@
         <file name="btc-bas.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
-        <file name="apertium-bas-btc.eng-kat.t1x"/>
+        <file name="apertium-bas-btc.btc-bas.t1x"/>
         <file name="btc-bas.t1x.bin"/>
       </program>
       <program name="apertium-interchunk">
-        <file name="apertium-bas-btc.eng-kat.t2x"/>
+        <file name="apertium-bas-btc.btc-bas.t2x"/>
         <file name="btc-bas.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-bas-btc.eng-kat.t3x"/>
+        <file name="apertium-bas-btc.btc-bas.t3x"/>
         <file name="btc-bas.t3x.bin"/>
       </program>
       <program name="hfst-proc $1">
