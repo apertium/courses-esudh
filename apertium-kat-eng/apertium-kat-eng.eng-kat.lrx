@@ -7,7 +7,7 @@
   <rule>
     <match lemma="wind"/>
     <match lemma="power" tags="n.*">
-      <select lemma="energía" tags="n.*"/>
+      <select lemma="ენერგია" tags="n.*"/>
     </match>
   </rule>
 </rules>

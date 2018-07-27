@@ -25,7 +25,10 @@ NounRoot ;
 LEXICON RegNounInfl
 
 %<n%>%<sg%>: # ;
-%<n%>%<pl%>:%>s # ;
+%<n%>%<pl%>:%>ებ # ;
+%<n%>%<sg%>%<nom%>:ი # ;
+%<n%>%<pl%>%<%nom%>:%>ები # ;
+
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -34,7 +37,7 @@ LEXICON RegNounInfl
 
 LEXICON NounRoot
 
-house:house RegNounInfl ; ! A noun
+სახლ RegNounInfl ; ! A noun
 
 
 
