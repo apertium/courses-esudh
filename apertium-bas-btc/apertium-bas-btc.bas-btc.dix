@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dictionary>
    <!-- Define the alphabet below. -->
-  <alphabet>aAáÁăảạÆbBcCčdDÐeEéèễệfFgGhHiIíjJkKlLmMnNoOóöớpPqQrRsSšştTŢuUúüưvVwWxXyYzZ</alphabet>
+  <alphabet>aAáàâǎÁăảạÆbBcCčdDÐeEéèêěễệɛɛ́ɛ̀ɛ̂ɛ̌fFgGhHiIíìîǐjJkKlLmMnNŋŋ̀ŋ́oOóòôǒöớɔɔ́ɔ̀ɔ̂ɔ̌pPqQrRsSšştTŢuúùûǔüưvVwWxXyYzZ</alphabet>
 
   <sdefs>
     <!-- Define symbol definitions within <sdef> here. -->
@@ -90,6 +90,21 @@
     <sdef n="rpar"            c="Right parenthesis"/>
     <sdef n="lquot"           c="Left quote"/>
     <sdef n="rquot"           c="Right quote"/>
+    <sdef n="cl"              c="Noun class"/>
+    <sdef n="cl1"             c="Noun class 1"/>
+    <sdef n="cl2"             c="Noun class 2"/>
+    <sdef n="cl3"             c="Noun class 3"/>
+    <sdef n="cl4"             c="Noun class 4"/>
+    <sdef n="cl5"             c="Noun class 5"/>
+    <sdef n="cl6"             c="Noun class 6"/>
+    <sdef n="cl7"             c="Noun class 7"/>
+    <sdef n="cl8"             c="Noun class 8"/>
+    <sdef n="cl9"             c="Noun class 9"/>
+    <sdef n="cl10"            c="Noun class 10"/>
+    <sdef n="cl11"            c="Noun class 11"/>
+    <sdef n="cl12"            c="Noun class 12"/>
+    <sdef n="cl13"            c="Noun class 13"/>
+    <sdef n="cl14"            c="Noun class 14"/>
 
     <sdef n="compound-only-L" c="May only be the left-side of a compound"/>
     <sdef n="compound-R"      c="May be the right-side of a compound, or a full word"/>
@@ -97,9 +112,20 @@
 
    <section id="main" type="standard">
       <!-- Define entries within <e> here. -->
-      <e><p><l>house<s n="n"/></l><r>casa<s n="n"/><s n="f"/></r></p></e>
+      <e><p><l><s n="n"/><s n="cl6"/><s n="pl"/>ndap</l><r><s n="n"/><s n="cl7"/><s n="sg"/>caans</r></p></e>
+      <e><p><l><s n="n"/><s n="cl1"/><s n="sg"/>mut</l><r><s n="n"/><s n="cl1"/><s n="sg"/>muund</r></p></e>
+      <e><p><l><s n="n"/><s n="cl2"/><s n="pl"/>bot</l><r><s n="n"/><s n="cl2"/><s n="pl"/>beend</r></p></e>
+      <e><p><l><s n="n"/><s n="cl5"/><s n="sg"/>liwanda</l><r><s n="n"/><s n="cl7"/><s n="sg"/>kikende</r></p></e>
+      <e><p><l><s n="n"/><s n="cl6"/><s n="pl"/>mawanda</l><r><s n="n"/><s n="cl8"/><s n="pl"/>bikende</r></p></e>
+      <e><p><l>nwii<s n="n"/><s n="cl3"/><s n="sg"/></l><r>pwaak<s n="n"/><s n="cl3"/><s n="sg"/></r></p></e>
+      <e><p><l><s n="n"/><s n="cl1"/><s n="sg"/>mudaa</l><r><s n="n"/><s n="cl1"/><s n="sg"/>nkaand</r></p></e>
+      <e><p><l><s n="n"/><s n="cl2"/><s n="pl"/>bodaa</l><r><s n="n"/><s n="cl2"/><s n="pl"/>bakaand</r></p></e>
+      <e><p><l><s n="n"/><s n="cl1"/><s n="sg"/>maange</l><r><s n="n"/><s n="cl1"/><s n="sg"/>mɔɔy</r></p></e>
+      <e><p><l><s n="n"/><s n="cl2"/><s n="pl"/>boonge</l><r><s n="n"/><s n="cl2"/><s n="pl"/>baay</r></p></e>
+      <e><p><l>wɛm<s n="pos"/><s n="sg"/><s n="p1"/></l><r>wam<s n="pos"/><s n="sg"/><s n="p1"/></r></p></e>
 
-      <e><re>[.\?;:!…¿¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+
+      <e><re>[.\?;:!…¶]</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
       <e><re>,</re>          <p><l><s n="cm"/></l>  <r><s n="cm"/></r></p></e>
    </section>
 </dictionary>

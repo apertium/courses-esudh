@@ -1,40 +1,414 @@
-! Morphological Transducer for Bati
+! Morphological Transducer for Bassa
 
 Multichar_Symbols
 
 ! Part of speech categories
-%<n%>   ! Noun
+%<n%>   ! Nom
+%<vblex%> ! Verbe
+%<num%> ! Numéral
+%<cl%> ! Classe nominale
+%<vbser%> ! Verbe être
+%<vbhaber%> ! Verbe avoir
+%<vbmod%> ! Verbe modal
+%<vaux%> ! Verbe auxiliaire
+%<conn%> ! Connective
+%<cop%> ! Copule
+%<adv%> ! Adverbe
+%<post%> ! Postposition
+%<mod%> ! particule modale
+%<det%> ! Déterminant
+%<prn%> ! Pronoun
+%<pr%> ! Préposition
+%<np%> ! Noun propre
+%<ij%> ! Interjection
+%<cnjcoo%> !  Co-ordinating conjunction
+%<sent%> ! Ponctuation de fin de phrase (point)
+%<cm%> ! Virgule
+%<lquot%> ! guillemets ouvrants
+%<rquot%> ! guillemets fermants
+%<lpar%> ! parenthèses ouvrantes
+%<rpar%> ! parenthèses fermantes
 
 ! Number morphology
-%<pl%>  ! Plural
-%<sg%>  ! Singular
+%<n%>%<sg%>  ! Singulier
+%<n%>%<pl%>  ! Pluriel
+! Morphology persons
+
+%<p1%> ! Première personne
+%<p2%> ! Deuxième personne
+%<p3%> ! Troisième personne
+
+
+! Noun Classes
+%<n%>%<cl1%> ! Marqueur de classe 1
+%<n%>%<cl2%> ! Marqueur de classe 1
+%<n%>%<cl3%> ! Marqueur de classe 3
+%<n%>%<cl4%> ! Marqueur de classe 4
+%<n%>%<cl5%> ! Marqueur de classe 5
+%<n%>%<cl6%> ! Marqueur de classe 6
+%<n%>%<cl7%> ! Marqueur de classe 7
+%<n%>%<cl8%> ! Marqueur de classe 8
+%<n%>%<cl9%> ! Marqueur de classe 9
+%<n%>%<cl10%> ! Marqueur de classe 10
+%<n%>%<cl13%> ! Marqueur de classe 13
+%<n%>%<cl14%> ! Marqueur de classe 14
+
+! Infinitive marker
+%<inf%> ! Infinitive
 
 ! Other symbols
 %>      ! Morpheme boundary
+
+LEXICON Root
+!! LEXICONS per class
+
+Prefixes ;
+POSS ;
+DEM ;
+NOUN ;
+VERB ;
+PRON ;
+ADJ ;
+AUX ;
+DET ;
+ADV ;
+LOC ;
+NUM ;
+PROPN ;
+CONN ;
+CNJCOO ;
+
+LEXICON NOUN
+
+%<n%>: NOUN_CL ;
+
+LEXICON NOUN_CL
+
+%<cl1%>:0 NOUN_CL1 ;
+%<cl2%>:0 NOUN_CL2 ;
+%<cl3%>:0 NOUN_CL3 ;
+%<cl4%>:0 NOUN_CL4 ;
+%<cl5%>:0 NOUN_CL5 ;
+%<cl6%>:0 NOUN_CL6 ;
+%<cl7%>:0 NOUN_CL7 ;
+%<cl8%>:0 NOUN_CL8 ;
+%<cl9%>:0 NOUN_CL9 ;
+%<cl10%>:0 NOUN_CL10 ;
+%<cl13%>:0 NOUN_CL13 ;
+%<cl14%>:0 NOUN_CL14 ;
+
+
+ LEXICON Prefixes
+
+!! %<sg%>:m NounRoot1 ;
+!! %<sg%>:n NounRoot2 ;
+!! %<pl%>:ba NounRoot3 ;
+!! %<pl%>:b NounRoot4 ;
+!! %<sg%>:ki NounRoot5 ;
+!! %<sg%>:pw NounRoot6 ;
+!! %<pl%>:ma NounRoot7 ;
+!! %<sg%>:0 NounRoot8 ;
+%<inf%>:ki VerbRoot1 ;
+
+LEXICON NOUN_CL1
+
+%<sg%>:m NOUN_CL1_M ;
+%<sg%>:n NOUN_CL1_N ;
+%<sg%>:0 NOUN_CL1_ZERO ;
+
+LEXICON NOUN_CL2
+
+%<pl%>:ba NOUN_CL2_BA ;
+%<pl%>:b NOUN_CL2_B ;
+
+LEXICON NOUN_CL3
+
+%<sg%>:0 NOUN_CL3_ZERO ;
+
+LEXICON NOUN_CL6
+
+%<pl%>:ma NOUN_CL6_MA ;
+
+LEXICON NOUN_CL7
+
+%<sg%>:ki NOUN_CL7_KI ;
+
+LEXICON NOUN_CL8
+
+%<pl%>:bi NOUN_CL8_BI ;
+
+LEXICON NOUN_CL14
+
+%<sg%>:pw NOUN_CL14_PW ;
+
+
+LEXICON CONN
+
+%<cl2%>:0 CONN_cl2 ; ! Connectif de classe 2
+%<cl7%>:0 CONN_cl7 ; ! Connectif de classe 7
+
+LEXICON POSS
+
+%<pos%>%<cl1%>: POSS_CL1 ;
+%<pos%>%<cl2%>: POSS_CL2 ;
+%<pos%>%<cl3%>: POSS_CL3 ;
+%<pos%>%<cl4%>: POSS_CL4 ;
+%<pos%>%<cl5%>: POSS_CL5 ;
+%<pos%>%<cl6%>: POSS_CL6 ;
+%<pos%>%<cl7%>: POSS_CL7 ;
+%<pos%>%<cl8%>: POSS_CL8 ;
+%<pos%>%<cl9%>: POSS_CL9 ;
+%<pos%>%<cl10%>: POSS_CL10 ;
+%<pos%>%<cl13%>: POSS_CL13 ;
+%<pos%>%<cl14%>: POSS_CL14 ;
+
+
+LEXICON POSS_CL1
+
+%<sg%>: POSS_CL1_SG ;
+%<pl%>: POSS_CL1_PL ;
+
+LEXICON POSS_CL2
+
+%<sg%>: POSS_CL2_SG ;
+%<pl%>: POSS_CL2_PL ;
+
+LEXICON POSS_CL3
+
+%<sg%>: POSS_CL3_SG ;
+%<pl%>: POSS_CL3_PL ;
+
+LEXICON POSS_CL4
+
+%<sg%>: POSS_CL4_SG ;
+%<pl%>: POSS_CL4_PL ;
+
+LEXICON POSS_CL5
+
+%<sg%>: POSS_CL5_SG ;
+%<pl%>: POSS_CL5_PL ;
+
+LEXICON POSS_CL6
+
+%<sg%>: POSS_CL6_SG ;
+%<pl%>: POSS_CL6_PL ;
+
+LEXICON POSS_CL7
+
+%<sg%>: POSS_CL7_SG ;
+%<pl%>: POSS_CL7_PL ;
+
+LEXICON POSS_CL8
+
+%<sg%>: POSS_CL8_SG ;
+%<pl%>: POSS_CL8_PL ;
+
+LEXICON POSS_CL9
+
+%<sg%>: POSS_CL9_SG ;
+%<pl%>: POSS_CL9_PL ;
+
+LEXICON POSS_CL10
+
+%<sg%>: POSS_CL10_SG ;
+%<pl%>: POSS_CL10_PL ;
+
+LEXICON POSS_CL13
+
+%<sg%>: POSS_CL13_SG ;
+%<pl%>: POSS_CL13_PL ;
+
+LEXICON POSS_CL14
+
+%<sg%>: POSS_CL14_SG ;
+%<pl%>: POSS_CL14_PL ;
+
+
+
+LEXICON POSS_CL1_SG ! tags here build from "LEXICON POSS_CL1 tags"
+
+%<p1%>:w POSS_CL1_SG_P1 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la première personne du singulier
+%<p2%>:w POSS_CL1_SG_P2 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la deuxième personne du singulier
+%<p3%>:w POSS_CL1_SG_P3 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la troisième personne du singulier
+
+LEXICON POSS_CL1_PL ! tags here build from "LEXICON POSS_CL1 tags"
+
+%<p1%>: POSS_CL1_PL_P1 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la première personne du singulier
+%<p2%>: POSS_CL1_PL_P2 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la deuxième personne du singulier
+%<p3%>: POSS_CL1_PL_P3 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la troisième personne du singulier
+
+LEXICON POSS_CL2_SG ! tags here build from "LEXICON POSS_CL2 tags"
+
+%<p1%>:b POSS_CL2_SG_P1 ; ! Marqueur de classe nominale 2 de l'adjectif possession à la première personne du singulier
+%<p2%>:b POSS_CL2_SG_P2 ; ! Marqueur de classe nominale 2 de l'adjectif possession à la deuxième personne du singulier
+%<p3%>:b POSS_CL2_SG_P3 ; ! Marqueur de classe nominale 2 de l'adjectif possession à la troisième personne du singulier
+
+LEXICON POSS_CL2_PL ! tags here build from "LEXICON POSS_CL2 tags"
+
+%<p1%>: POSS_CL2_PL_P1 ; ! Marqueur de classe nominale 2 de l'adjectif possession à la première personne du singulier
+%<p2%>: POSS_CL2_PL_P2 ; ! Marqueur de classe nominale 2 de l'adjectif possession à la deuxième personne du singulier
+%<p3%>: POSS_CL2_PL_P3 ; ! Marqueur de classe nominale 2 de l'adjectif possession à la troisième personne du singulier
+
+
+LEXICON NUM
+
+NUM_CARD ;
+NUM_ORD ;
+
+LEXICON NUM_CARD
+
+%<sg%>:0 NUM_CARD_MU ;
+%<pl%>:0 NUM_CARD_BAAND ;
+%<pl%>%<cl2%>:ba NUM_CARD_TAAK ;
+%<pl%>%<cl8%>:bi NUM_CARD_TAAK ; 
+
+
+%<sg%>:0 NUM_ORD_BISO ;
+
+
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON Root
+LEXICON Ninfl
 
-NounRoot ;
+%<sg%>:m Nouns ;
+%<pl%>:n Nouns ;
+%<pl%>:ba Nouns ;
+%<pl%>:b Nouns ;
+%<pl%>:ma Nouns ;
+%<sg%>:0 Nouns ;
+%<pl%>:bi Nouns ;
+%<sg%>:ki Nouns ;
+%<pl%>:bi Nouns ;
 
 
 LEXICON RegNounInfl
 
 %<n%>%<sg%>: # ;
-%<n%>%<pl%>:%>s # ;
+%<n%>%<pl%>: # ;
+
+
+LEXICON Vinfl
+
+%<inf%>:ki Verbs ;
+
+
+LEXICON RegVerbInfl
+
+%<v%>%<inf%>: # ;
+
+LEXICON ConnInfl
+
+%<cl2%>:ba Connective ;
+%<cl7%>:ki Connective ;
+
+LEXICON RegConnInfl
+
+%<conn%>%<cl2%>: # ;
+%<conn%>%<cl7%>: # ;
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON NounRoot
+LEXICON NOUN_CL1_M
 
-house:house RegNounInfl ; ! A noun
+uund # ; ! "mut"
+aay:ɔɔy # ; ! "maange"
+
+
+LEXICON NOUN_CL1_N
+
+gɔs:kɔs # ; !
+kon:kon # ; ! "basôgôl"
+tɛ # ; ! "ta"
+ti # ; ! "Bati"
+
+
+LEXICON NOUN_CL1_ZERO
+
+tɛ # ; ! "ta"
+
+LEXICON NOUN_CL2_BA
+
+kɔs:gɔs # ; ! "nwaa"
+kaand # ; ! "mudaa"
+kon # ; ! "sôgôl"
+
+LEXICON NOUN_CL2_B
+
+uund:eend # ; ! "bôt"
+ɔɔy:aay # ; ! "enfants"
+
+LEXICON NOUN_CL3_ZERO
+
+ngoynin # ; ! "nŋaŋ"
+ntɛbɛt # ; ! "hɔp"
+
+LEXICON NOUN_CL7_KI
+
+kende # ; ! "liwanda"
+sɛɛnd # ; ! "jol"
+
+
+LEXICON NOUN_CL6_MA
+
+ak # ; ! "manwii"
+
+
+LEXICON NOUN_CL14_PW
+
+ak # ; ! "nwii"
+
+
+LEXICON VerbRoot1
+
+nya # ; ! "jɛ"
+
+
+LEXICON CONN_cl2
+
+ba # ; ! "marqueur d'appartenance en classe 2"
+
+LEXICON CONN_cl7
+
+ki # ; ! "marqueur d'appartenance en classe 7"
+
+LEXICON NUM_CARD_MU
+
+mu # ; ! "ada (numéral cardinal)"
+
+LEXICON NUM_CARD_BAAND
+
+baand # ; ! "ba" (numéral cardinal)
+
+LEXICON NUM_CARD_TAAK
+
+taak # ; ! "aa (numéral cardinal)"
+
+LEXICON NUM_ORD_BISO
+
+biso # ; ! "bisu"
+
+LEXICON POSS_CL1_SG_P1
+
+am # ; ! "wem (possessif de classe 1, première personne du singulier)"
+
+LEXICON POSS_CL2_SG_P1
+
+am # ; ! "wem (possessif de classe 1, première personne du pluriel)"
+
+
+
+
+
+
+
+
 
 
 
@@ -46,4 +420,3 @@ house:house RegNounInfl ; ! A noun
 ! https://github.com/hfst/
 ! http://www.cis.upenn.edu/~cis639/docs/lexc.html
 ! http://wiki.apertium.org/wiki/Hfst
-

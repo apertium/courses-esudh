@@ -3,38 +3,603 @@
 Multichar_Symbols
 
 ! Part of speech categories
-%<n%>   ! Noun
+%<n%>   ! Nom
+%<vblex%> ! Verbe
+%<num%> ! Numéral
+%<cl%> ! Classe nominale
+%<vbser%> ! Verbe être
+%<vbhaber%> ! Verbe avoir
+%<vbmod%> ! Verbe modal
+%<vaux%> ! Verbe auxiliaire
+%<conn%> ! Connective
+%<cop%> ! Copule
+%<adv%> ! Adverbe
+%<post%> ! Postposition
+%<mod%> ! particule modale
+%<det%> ! Déterminant
+%<prn%> ! Pronoun
+%<pr%> ! Préposition
+%<np%> ! Noun propre
+%<ij%> ! Interjection
+%<cnjcoo%> !  Co-ordinating conjunction
+%<sent%> ! Ponctuation de fin de phrase (point)
+%<cm%> ! Virgule
+%<lquot%> ! guillemets ouvrants
+%<rquot%> ! guillemets fermants
+%<lpar%> ! parenthèses ouvrantes
+%<rpar%> ! parenthèses fermantes
+
 
 ! Number morphology
-%<pl%>  ! Plural
-%<sg%>  ! Singular
+%<n%>%<sg%>  ! Singulier
+%<n%>%<pl%>  ! Pluriel
+
+! Morphology persons
+
+%<p1%> ! Première personne
+%<p2%> ! Deuxième personne
+%<p3%> ! Troisième personne
+
+
+! Noun Classes
+%<n%>%<cl1%> ! Marqueur de classe 1
+%<n%>%<cl2%> ! Marqueur de classe 1
+%<n%>%<cl3%> ! Marqueur de classe 3
+%<n%>%<cl4%> ! Marqueur de classe 4
+%<n%>%<cl5%> ! Marqueur de classe 5
+%<n%>%<cl6%> ! Marqueur de classe 6
+%<n%>%<cl7%> ! Marqueur de classe 7
+%<n%>%<cl8%> ! Marqueur de classe 8
+%<n%>%<cl9%> ! Marqueur de classe 9
+%<n%>%<cl10%> ! Marqueur de classe 10
+%<n%>%<cl13%> ! Marqueur de classe 13
+%<n%>%<cl14%> ! Marqueur de classe 14
 
 ! Other symbols
-%>      ! Morpheme boundary
+%>      ! Limite de morphème
+
+LEXICON Root
+!! LEXICONS per class
+
+Prefixes ;
+POSS ;
+DEM ;
+NOUN ;
+VERB ;
+PRON ;
+ADJ ;
+AUX ;
+DET ;
+ADV ;
+LOC ;
+NUM ;
+PROPN ;
+CONN ;
+CNJCOO ;
+
+LEXICON NOUN
+
+%<n%>: NOUN_CL ;
+
+LEXICON NOUN_CL
+
+%<cl1%>:0 NOUN_CL1 ;
+%<cl2%>:0 NOUN_CL2 ;
+%<cl3%>:0 NOUN_CL3 ;
+%<cl4%>:0 NOUN_CL4 ;
+%<cl5%>:0 NOUN_CL5 ;
+%<cl6%>:0 NOUN_CL6 ;
+%<cl7%>:0 NOUN_CL7 ;
+%<cl8%>:0 NOUN_CL8 ;
+%<cl9%>:0 NOUN_CL9 ;
+%<cl10%>:0 NOUN_CL10 ;
+%<cl13%>:0 NOUN_CL13 ;
+%<cl14%>:0 NOUN_CL14 ;
+
+LEXICON NOUN_CL1
+
+%<sg%>:m NOUN_CL1_M ;
+%<sg%>:n NOUN_CL1_N ;
+%<sg%>:0 NOUN_CL1_ZERO ;
+
+LEXICON NOUN_CL2
+
+%<pl%>:ba NOUN_CL2_BA ;
+%<pl%>:b NOUN_CL2_B ;
+
+LEXICON NOUN_CL3
+
+%<sg%>:n NOUN_CL3_N ;
+%<sg%>:0 NOUN°CL3_ZERO ;
+
+LEXICON NOUN_CL4
+
+%<pl%>:mi NOUN_CL4_MI ;
+
+LEXICON NOUN_CL5
+
+%<sg%>:0 NOUN_CL5_ZERO ;
+%<sg%>:li NOUN_CL5_LI ;
+
+LEXICON NOUN_CL6
+
+%<pl%>:ma NOUN_CL6_MA ;
+%<pl%>:m NOUN_CL6_M ;
+
+LEXICON NOUN_CL7
+
+%<sg%>:0 NOUN_CL7_ZERO ;
+%<sg%>:y NOUN_CL7_Y ;
+
+LEXICON NOUN_CL8
+
+%<pl%>:bi NOUN_CL8_BI ;
+%<pl%>:gw NOUN_CL8_GW ;
+
+LEXICON NOUN_CL9
+
+%<sg%>:0 NOUN_CL9_ZERO ;
+
+LEXICON NOUN_CL10
+
+%<pl%>:0 NOUN_CL10_ZERO ;
+
+LEXICON NOUN_CL13
+
+%<sg%>:hi NOUN_CL13_HI ;
+
+LEXICON NOUN_CL14
+
+%<pl%>:di NOUN_CL14_DI ;
+
+
+!! LEXICON Prefixes
+
+!! %<sg%>:n NOUN_CL1_N ;
+!! %<pl%>:ba NounRoot3 ;
+!! %<pl%>:b NounRoot4 ;
+!! %<pl%>:ma NounRoot5 ;
+!! %<sg%>:0 NounRoot6 ;
+!! %<pl%>:bi NounRoot7 ;
+!! %<sg%>:hi NounRoot8 ;
+!! %<pl%>:di NounRoot9 ;
+!! %<sg%>:li NounRoot10 ;
+!! %<pl%>:mi NounRoot11 ;
+!! %<inf%>:0 VerbRoot1 ;
+
+
+LEXICON CONN
+
+%<conn%>:0 CONN_CL1 ; ! Connectif de classe 1
+%<conn%>:0 CONN_CL2 ; ! Connectif de classe 2
+%<conn%>:0 CONN_CL3 ; ! Connectif de classe 2
+%<conn%>:0 CONN_CL4 ; ! Connectif de classe 4
+%<conn%>:0 CONN_CL5 ; ! Connectif de classe 5
+%<conn%>:0 CONN_CL6 ; ! Connectif de classe 6
+%<conn%>:0 CONN_CL7 ; ! Connectif de classe 7
+%<conn%>:0 CONN_CL8 ; ! Connectif de classe 8
+%<conn%>:0 CONN_CL9 ; ! Connectif de classe 9
+%<conn%>:0 CONN_CL10 ; ! Connectif de classe 10
+%<conn%>:0 CONN_CL13 ; ! Connectif de classe 13
+%<conn%>:0 CONN_CL14 ; ! Connectif de classe 14
+
+LEXICON CONN_CL1
+
+%<cl1%>: CONN_CL1_NU ;
+
+LEXICON CONN_CL2
+
+%<cl2%>: CONN_CL2_BA ;
+
+LEXICON CONN_CL3
+
+%<cl3%>: CONN_CL3_U ;
+
+LEXICON CONN_CL4
+
+%<cl4%>: CONN_CL4_MI ;
+
+LEXICON CONN_CL5
+
+%<cl5%>: CONN_CL5_LI ;
+
+LEXICON CONN_CL6
+
+%<cl6%>: CONN_CL6_MA ;
+
+LEXICON CONN_CL7
+
+%<cl7%>: CONN_CL7_ZERO ;
+
+LEXICON CONN_CL8
+
+%<cl8%>: CONN_CL8_BI ;
+
+LEXICON CONN_CL9
+
+%<cl9%>: CONN_CL9_ZERO ;
+
+LEXICON CONN_CL10
+
+%<cl10%>: CONN_CL10_ZERO ;
+
+LEXICON CONN_CL13
+
+%<cl13%>: CONN_CL13_HI ;
+
+LEXICON CONN_CL14
+
+%<cl14%>: CONN_CL14_DI ;
+
+LEXICON NUM_CARD
+
+%<sg%>:0 NUM_CARD_ADA ;
+%<pl%>:0 NUM_CARD_BA ;
+%<pl%>:0 NUM_CARD_AA ;
+%<pl%>:0 NUM_CARD_NA ;
+%<pl%>:0 NUM_CARD_TAN ;
+%<pl%>:0 NUM_CARD_SAMAL ;
+%<pl%>:0 NUM_CARD_SAMBOK ;
+%<pl%>:0 NUM_CARD_JWEM ;
+%<pl%>:0 NUM_CARD_BO ;
+%<pl%>:0 NUM_CARD_JOM ;
+
+LEXICON NUM_ORD
+
+%<sg%>:0 NUM_BISU ;
+
+LEXICON CNJCOO
+
+%<cnjcoo%>:ni CNJCOO_NI ; ! "avec"
+%cnjcoo%>:bo CNJCOO_BO ; ! "avec (dual)"
+
+LEXICON POSS
+
+%<pos%>%<cl1%>: POSS_CL1 ;
+%<pos%>%<cl2%>: POSS_CL2 ;
+%<pos%>%<cl3%>: POSS_CL3 ;
+%<pos%>%<cl4%>: POSS_CL4 ;
+%<pos%>%<cl5%>: POSS_CL5 ;
+%<pos%>%<cl6%>: POSS_CL6 ;
+%<pos%>%<cl7%>: POSS_CL7 ;
+%<pos%>%<cl8%>: POSS_CL8 ;
+%<pos%>%<cl9%>: POSS_CL9 ;
+%<pos%>%<cl10%>: POSS_CL10 ;
+%<pos%>%<cl13%>: POSS_CL13 ;
+%<pos%>%<cl14%>: POSS_CL14 ;
+
+LEXICON POSS_CL1 ! tags here build from "LEXICON POSS" tags
+
+%<sg%>: POSS_CL1_SG ;
+%<pl%>: POSS_CL1_PL ;
+
+LEXICON POSS_CL2
+
+%<sg%>: POSS_CL2_SG ;
+%<pl%>: POSS_CL2_PL ;
+
+LEXICON POSS_CL3
+
+%<sg%>: POSS_CL3_SG ;
+%<sg%>: POSS_CL3_PL ;
+
+LEXICON POSS_CL4
+
+%<pl%>: POSS_CL4_SG ;
+%<pl%>: POSS_CL4_PL ;
+
+LEXICON POSS_CL5
+
+%<sg%>: POSS_CL5_SG ;
+%sg%>: POSS_CL5_PL ;
+
+LEXICON POSS_CL6
+
+%<sg%>: POSS_CL6_SG ;
+%<pl%>: POSS_CL4_PL ;
+
+LEXICON POSS_CL7
+
+%<sg%>: POSS_CL7_SG ;
+%<pl%<: POSS/CL7_PL ;
+
+LEXICON POSS_CL8
+
+%<sg%>: POSS_CL8_SG ;
+%<pl%>: POSS_CL8_PL ;
+
+LEXICON POSS_CL9
+
+%<sg%>: POSS_CL9_SG ;
+%<pl%>: POSS_CL9_PL ;
+
+LEXICON POSS_CL10
+
+%<sg%>: POSS_CL10_SG ;
+%<pl%>: POSS_CL10_PL ;
+
+LEXICON POSS_CL13
+
+%<sg%>: POSS_CL13_SG ;
+%<pl%>: POSS_CL13_PL ;
+
+LEXICON POSS_CL14
+
+%<sg%>: POSS_CL14_SG ;
+%<pl%>: POSS_CL14_PL ;
+
+LEXICON POSS_CL1_SG ! tags here build from "LEXICON POSS_CL1 tags"
+
+%<p1%>:w POSS_CL1_SG_P1 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la première personne du singulier
+%<p2%>:w POSS_CL1_SG_P2 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la deuxième personne du singulier
+%<p3%>:w POSS_CL1_SG_P3 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la troisième personne du singulier
+
+LEXICON POSS_CL1_PL ! tags here build from "LEXICON POSS_CL1 tags"
+
+%<p1%>:w POSS_CL1_PL_P1 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la première personne du singulier
+%<p2%>:n POSS_CL1_PL_P2 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la deuxième personne du singulier
+%<p3%>:w POSS_CL1_PL_P3 ; ! Marqueur de classe nominale 1 de l'adjectif possession à la troisième personne du singulier
+
+
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                       M O R P H O T A C T I C S                         !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON Root
+LEXICON Ninfl
 
-NounRoot ;
+%<sg%>:m Nouns ;
+%<pl%>:n Nouns ;
+%<pl%>:ba Nouns ;
+%<pl%>:b Nouns ;
+%<pl%>:ma Nouns ;
+%<sg%>:0 Nouns ;
+%<pl%>:bi Nouns ;
+%<sg%>:hi Nouns ;
+%<pl%>:di Nouns ;
+%<sg%>:li Nouns ;
+%<pl%>:mi Nouns ;
 
+
+LEXICON Vinfl
+
+%<inf%>:0 Verbs ;
 
 LEXICON RegNounInfl
 
 %<n%>%<sg%>: # ;
-%<n%>%<pl%>:%>s # ;
+%<n%>%<pl%>: # ;
+
+LEXICON RegVerbInfl 
+
+%<inf%>%<v%>:ki%> # ;
+
+
+LEXICON ConnInfl
+
+%<cl1%>:nu Connective ;
+%<cl2%>:ba Connective ;
+%<cl3%>:u Connective ;
+%<cl4%>:mi Connective ;
+%<cl5%>:li Connective ;
+%<cl6%>:ma Connective ;
+%<cl7%>:i Connective ;
+%<cl8%>:bi Connective ;
+%<cl9%>:0 Connective ;
+%<cl10%>:0 Connective ;
+%<cl13%>:13 Connective ;
+%<cl14%>:14 Connective ;
+
+LEXICON RegConnInfl
+
+%<conn%>%<cl1%>: # ;
+%<conn%>%<cl2%>: # ;
+%<conn%>%<cl3%>: # ;
+%<conn%>%<cl4%>: # ;
+%<conn%>%<cl5%>: # ;
+%<conn%>%<cl6%>: # ;
+%<conn%>%<cl7%>: # ;
+%<conn%>%<cl8%>: # ;
+%<conn%>%<cl9%>: # ;
+%<conn%>%<cl10%>: # ;
+%<conn%>%<cl13%>: # ;
+%<conn%>%<cl14%>: # ;
+
+
+
 
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!                          L E X I C O N                                  !!!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-LEXICON NounRoot
+LEXICON NOUN_CL1_M
 
-house:house RegNounInfl ; ! A noun
+ut # ; ! "person"
+an # ; ! "baby"
+aange # ; ! "child"
+udaa # ; ! "woman"
+alet # ; ! "teacher"
+
+
+LEXICON NOUN_CL1_N
+
+ken # ; !
+ŋaŋ # ; !
+
+LEXICON NOUN_CL1_ZERO
+
+ta # ; ! "tɛ"
+
+
+
+LEXICON NOUN_CL2_BA
+
+ken # ; !
+ta # ; ! "tɛ"
+ti # ; ! "Bati"
+
+LEXICON NOUN_CL2_B
+
+ut:ot # ; ! "persons"
+an:on # ; ! "babies"
+aange:oonge # ; ! "children"
+udaa:odaa # ; ! "women"
+alet # ; ! "teachers"
+
+
+LEXICON NOUN_CL6_MA
+
+ndap # ; ! "house"
+tam # ; ! "fruit"
+see # ; ! "joy"
+sak # ; ! "dance"
+temb # ; ! "return"
+tibla # ; ! "medication"
+wanda # ; ! "bikende"
+hɔp # ; ! "parole"
+
+LEXICON NOUN_CL6_ZERO
+
+hɔp # ; ! "parole"
+
+LEXICON NOUN_CL7_ZERO
+
+jek # ; ! "food"
+joŋ # ; ! "stupidity"
+toŋ # ; ! "palm-nut"
+tamb # ; ! "choose"
+tek # ; ! "ground"
+
+
+LEXICON NUM_JOM
+
+jom # ; ! "dix"
+
+LEXICON NUM_JWEM
+
+jwem # ; ! "huit"
+
+LEXICON NUM_BO
+
+bo # ; ! "neuf"
+
+LEXICON NOUN_CL8_BI
+
+jɛk # ; ! "food"
+joŋ # ; ! "stupidity"
+toŋ # ; ! "palm-nut"
+tamb # ; ! "choose"
+tek # ; ! "ground"
+ba # ; ! "deux"
+aa # ; ! "trois"
+na # ; ! "quatre"
+tan # ; ! "cinq"
+samal # ; ! "six"
+sambɔk # ; ! "sept"
+
+LEXICON NOUN_CL13_HI
+
+nuni # ; ! "bird"
+tam # ; ! "kidney"
+send # ; ! "squirrel"
+
+LEXICON NOUN_CL14_DI
+
+nuni # ; ! "birds"
+tam # ; ! "kidneys"
+send # ; ! "squirrels"
+
+LEXICON NounRoot10
+
+wanda # ; ! "kikende"
+
+LEXICON NounRoot11
+
+ŋaŋ # ; ! "paroles"
+
+LEXICON VerbRoot1
+
+jɛ # ; ! "kinya"
+
+LEXICON NUM_ORD_BISU
+
+bisu # ; ! "biso"
+
+LEXICON CONN_CL1_NU
+
+nu # ; ! "marqueur d'appartenance en classe 1"
+
+LEXICON CONN_CL2_BA
+
+ba # ; ! "marqueur d'appartenance en classe 2"
+
+LEXICON CONN_CL3_U
+
+u # ; ! "marqueur d'appartenance en classe 3"
+
+LEXICON CONN_CL4_MI
+
+mi # ; ! "marqueur d'appartenance en classe 4"
+
+LEXICON CONN_CL5_LI
+
+li # ; ! "marqueur d'appartenance en classe 5"
+
+LEXICON CONN_CL6_MA
+
+ma # ; ! "marqueur d'appartenance en classe 6"
+
+LEXICON CONN_CL7_I
+
+i # ; ! "marqueur d'appartenance en classe 7"
+
+LEXICON CONN_CL8_BI
+
+bi # ; ! "marqueur d'appartenance en classe 8"
+
+LEXICON CONN_CL9_ZERO
+
+0 # ; ! "marqueur d'appartenance en classe 9"
+
+LEXICON CONN_CL10_ZERO
+
+0 # ; ! "marqueur d'appartenance en classe 10"
+
+LEXICON CONN_CL13_HI
+
+hi # ; ! "marqueur d'appartenance en classe 13"
+
+LEXICON CONN_CL14_DI
+
+di # ; ! "marqueur d'appartenance en classe 14"
+
+LEXICON POSS_CL1_SG_P1
+
+ɛm # ; ! "morphème du possessif à la première personne du singulier de la classe 1"
+
+LEXICON POSS_CL1_SG_P2
+
+ɔŋ # ; ! "morphème du possessif à la deuxième personne du singulier de la classe 1"
+
+LEXICON POSS_CL1_SG_P3
+
+ée # ; ! "morphème du possessif à la troisième personne du singulier de la classe 1, devant ton haut"
+eé # ; ! "morphème du possessif à la troisième personne du singulier de la classe 1, devant ton bas"
+
+LEXICON POSS_CL1_PL_P1
+
+es # ; ! "morphème du possessif à la première personne du pluriel de la classe 1"
+
+LEXICON POSS_CL1_PL_P2
+
+an # ; ! "morphème du possessif à la deuxième personne du pluriel de la classe 1"
+
+LEXICON POSS_CL1_PL_P3
+
+ap # ; ! "morphème du possessif à la troisième personne du pluriel de la classe 1"
+
 
 
 
@@ -46,4 +611,3 @@ house:house RegNounInfl ; ! A noun
 ! https://github.com/hfst/
 ! http://www.cis.upenn.edu/~cis639/docs/lexc.html
 ! http://wiki.apertium.org/wiki/Hfst
-
