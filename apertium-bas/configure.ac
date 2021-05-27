@@ -1,6 +1,6 @@
 AC_PREREQ(2.52)
 
-AC_INIT([Apertium Bassa], [0.1.0], [{{email}}], [apertium-bas], [http://wiki.apertium.org/wiki/Apertium-bas])
+AC_INIT([Apertium Bassa], [0.1.0], [{{email}}], [apertium-bas], [https://wiki.apertium.org/wiki/Apertium-bas])
 AM_INIT_AUTOMAKE
 
 AC_PROG_LN_S

@@ -581,7 +581,7 @@ PACKAGE_TARNAME='apertium-eng'
 PACKAGE_VERSION='0.1.0'
 PACKAGE_STRING='Apertium {{languageName}} 0.1.0'
 PACKAGE_BUGREPORT='{{email}}'
-PACKAGE_URL='http://wiki.apertium.org/wiki/Apertium-eng'
+PACKAGE_URL='https://wiki.apertium.org/wiki/Apertium-eng'
 
 ac_subst_vars='LTLIBOBJS
 LIBOBJS
@@ -1316,7 +1316,7 @@ Use these variables to override the choices made by `configure' or to help
 it to find libraries and programs with nonstandard names/locations.
 
 Report bugs to <{{email}}>.
-Apertium {{languageName}} home page: <http://wiki.apertium.org/wiki/Apertium-eng>.
+Apertium {{languageName}} home page: <https://wiki.apertium.org/wiki/Apertium-eng>.
 _ACEOF
 ac_status=$?
 fi
@@ -3530,7 +3530,7 @@ Configuration files:
 $config_files
 
 Report bugs to <{{email}}>.
-Apertium {{languageName}} home page: <http://wiki.apertium.org/wiki/Apertium-eng>."
+Apertium {{languageName}} home page: <https://wiki.apertium.org/wiki/Apertium-eng>."
 
 _ACEOF
 cat >>$CONFIG_STATUS <<_ACEOF || ac_write_fail=1

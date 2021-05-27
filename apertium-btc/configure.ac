@@ -1,6 +1,6 @@
 AC_PREREQ(2.52)
 
-AC_INIT([Apertium Bati], [0.1.0], [{{email}}], [apertium-btc], [http://wiki.apertium.org/wiki/Apertium-btc])
+AC_INIT([Apertium Bati], [0.1.0], [{{email}}], [apertium-btc], [https://wiki.apertium.org/wiki/Apertium-btc])
 AM_INIT_AUTOMAKE
 
 AC_PROG_LN_S
